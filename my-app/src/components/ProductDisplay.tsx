@@ -8,8 +8,7 @@ export type ProductDisplayProps = {
 
 export const ProductDisplay = ({product, onRemove}: ProductDisplayProps) => {
     return (
-        <Col>
-            {/* <Card style={{ width: '18rem' }}> */}
+        <Col sm={3}>
             <Card>
                 {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                 <Card.Body>
