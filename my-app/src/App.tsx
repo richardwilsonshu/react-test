@@ -1,24 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { IProduct } from './class/IProduct';
+import Basket from './components/Basket';
 
 function App() {
+
+  const allProducts = [
+  {
+      id: "1",
+      name: "Trainers",
+      price: 29.99,
+      keywords: "shoes",
+      category: "clothing"
+  },
+  {
+      id: "2",
+      name: "Lemon & Lime Sparkling Water",
+      price: 0.8,
+      keywords: "drink fizz",
+      category: "drinks"
+  }
+  ] as IProduct[];
+
+  const basketItems = [allProducts[0]];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Basket basketItems={basketItems} />
     </div>
   );
 }
