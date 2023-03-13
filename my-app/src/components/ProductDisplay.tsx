@@ -6,7 +6,7 @@ export type ProductDisplayProps = {
 
 export const ProductDisplay = ({product}: ProductDisplayProps) => {
     return (
-        <div style={{"padding": "10px", "backgroundColor": "lightyellow"}}>
+        <div style={{"padding": "10px", "backgroundColor": "lightyellow", "maxWidth": "400px"}}>
             <h3>{product.name}</h3>
             <p>{product.description}</p>
             <p>£{product.price}</p>
