@@ -9,7 +9,7 @@ export const ProductList = ({products}: ProductListProps) => {
     return (
         <>
             {products.map(product => {
-                return (<ProductDisplay product={product} />);
+                return (<ProductDisplay key={product.id} product={product} />);
             })}
         </>
     );

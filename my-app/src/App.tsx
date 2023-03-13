@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import './App.css';
 import { IProduct } from './class/IProduct';
 import Basket from './components/Basket';
@@ -25,9 +26,9 @@ function App() {
   const basketItems = [allProducts[0]];
 
   return (
-    <div className="App">
+    <Container fluid>
       <Basket basketItems={basketItems} />
-    </div>
+    </Container>
   );
 }
 
