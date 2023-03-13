@@ -1,4 +1,4 @@
-import { Button, Card } from "react-bootstrap";
+import { Button, Card, Col } from "react-bootstrap";
 import { IProduct } from "../class/IProduct";
 
 export type ProductDisplayProps = {
@@ -8,22 +8,20 @@ export type ProductDisplayProps = {
 
 export const ProductDisplay = ({product, onRemove}: ProductDisplayProps) => {
     return (
-
-        <Card style={{ width: '18rem' }}>
-            {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-            <Card.Body>
-                <Card.Title>{product.name}</Card.Title>
-                <Card.Text>{product.description}</Card.Text>
-                <Card.Text>£{product.price}</Card.Text>
-                <Button variant="danger" onClick={onRemove}>Remove</Button>
-            </Card.Body>
-        </Card>
-
-        // <div style={{"padding": "10px", "backgroundColor": "lightyellow", "maxWidth": "400px"}}>
-        //     <h3>{product.name}</h3>
-        //     <p>{product.description}</p>
-        //     <p>£{product.price}</p>
-        // </div>
+        <Col>
+            {/* <Card style={{ width: '18rem' }}> */}
+            <Card>
+                {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+                <Card.Body>
+                    <Card.Title>{product.name}</Card.Title>
+                    <Card.Text>{product.description}</Card.Text>
+                    <Card.Text>£{product.price}</Card.Text>
+                    <p className="m-0 p-0 small text-muted">Category: {product.category}</p>
+                    <p className="m-0 p-0 small text-muted">Keywords: {product.keywords}</p>
+                    <Button className="mt-3" variant="danger" onClick={onRemove}>Remove</Button>
+                </Card.Body>
+            </Card>
+        </Col>
     );
 }
 
