@@ -2,10 +2,11 @@ import { Button, Card } from "react-bootstrap";
 import { IProduct } from "../class/IProduct";
 
 export type ProductDisplayProps = {
-    product: IProduct
+    product: IProduct;
+    onRemove: () => void;
 };
 
-export const ProductDisplay = ({product}: ProductDisplayProps) => {
+export const ProductDisplay = ({product, onRemove}: ProductDisplayProps) => {
     return (
 
         <Card style={{ width: '18rem' }}>
@@ -14,7 +15,7 @@ export const ProductDisplay = ({product}: ProductDisplayProps) => {
                 <Card.Title>{product.name}</Card.Title>
                 <Card.Text>{product.description}</Card.Text>
                 <Card.Text>£{product.price}</Card.Text>
-                <Button variant="danger" onClick={() => { console.log("Some magic needed here!") }}>Remove</Button>
+                <Button variant="danger" onClick={onRemove}>Remove</Button>
             </Card.Body>
         </Card>
 

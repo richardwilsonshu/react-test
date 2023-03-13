@@ -4,9 +4,10 @@ import ProductList from "./ProductList";
 
 export type BasketProps = {
     basketItems: IProduct[];
+    onRemove: (id: string) => void;
 };
 
-export const Basket = ({basketItems}: BasketProps) => {
+export const Basket = ({basketItems, onRemove}: BasketProps) => {
 
     return (
         <Row style={{padding: "20px"}}>
@@ -14,7 +15,7 @@ export const Basket = ({basketItems}: BasketProps) => {
             { 
                 basketItems.length === 0 
                     ? <h4>Your basket is empty!</h4>
-                    : <ProductList products={basketItems} />
+                    : <ProductList products={basketItems} onRemove={onRemove} />
             }
         </Row>
     );
