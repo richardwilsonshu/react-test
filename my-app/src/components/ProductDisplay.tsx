@@ -1,14 +1,14 @@
-import { Button, Card, Col } from "react-bootstrap";
+import { Button, Card, Col, ColProps } from "react-bootstrap";
 import { IProduct } from "../class/IProduct";
 
 export type ProductDisplayProps = {
     product: IProduct;
     onRemove: () => void;
-};
+} & ColProps;
 
-export const ProductDisplay = ({product, onRemove}: ProductDisplayProps) => {
+export const ProductDisplay = ({product, onRemove, ...other}: ProductDisplayProps) => {
     return (
-        <Col sm={3}>
+        <Col {...other}>
             <Card>
                 {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                 <Card.Body>

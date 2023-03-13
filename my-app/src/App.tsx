@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import './App.css';
 import { AllProducts } from './class/IProduct';
-import Basket from './components/Basket';
+import Basket from './pages/Basket';
 
 function App() {
 
