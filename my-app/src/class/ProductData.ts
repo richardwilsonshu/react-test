@@ -1,3 +1,5 @@
+import { IProduct } from "./IProduct"
+
 export const productData = {
     "products":  [{
           "id": "GGOEAFKA087499",
@@ -849,7 +851,7 @@ export const productData = {
           "category": "apparel",
           "subcategory": "apparel"
         }
-      ]
+      ] as IProduct[]
   }
  
 

@@ -7,6 +7,7 @@ export interface IProduct {
     url?: string;
     category: string;
     subcategory?: string;
+    stock?: number;
 };
 
 // export const AllProducts = [
